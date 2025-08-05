@@ -30,7 +30,7 @@ app.use("/api/todos", todoRoutes);
 // Error handling
 app.use(errorHandler);
 
-app.listen("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Server is running");
 });
 
