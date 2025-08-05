@@ -12,12 +12,10 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(
-  cors({
-    origin: 'https://client-todo-olive.vercel.app/',
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://client-todo-woad.vercel.app/'], // your frontend URLs
+  credentials: true,
+}));
 app.use(express.json());
 
 // Connect DB
