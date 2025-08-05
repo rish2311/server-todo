@@ -31,7 +31,9 @@ app.use("/api/todos", todoRoutes);
 app.use(errorHandler);
 
 app.get("/", (req, res) => {
-  res.send("Server is running");
+  res.json({
+    message: "Server is running",
+  });
 });
 
 const PORT = process.env.PORT || 5000;
